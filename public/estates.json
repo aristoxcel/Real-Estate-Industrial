@@ -1,0 +1,110 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co/9nJqQ68/warehouse3.jpg",
+      "title": "Spacious Warehouse Complex",
+      "segment_name": "Warehouses",
+      "description": "This warehouse complex offers expansive storage spaces suitable for various industrial needs. With high ceilings and wide entrances, it accommodates easy loading and unloading of goods. Additionally, the facility is equipped with advanced security systems to ensure the safety of stored items.",
+      "price": "$5000/month",
+      "status": "Rent",
+      "area": "5000 sqft",
+      "location": "Industrial Park, City XYZ",
+      "facilities": ["Security Cameras", "Loading Docks", "Forklift Access", "24/7 Security", "Climate Control", "Office Space"]
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co/P5B2K97/factories2.jpg",
+      "title": "Modern Factory Complex",
+      "segment_name": "Factories",
+      "description": "This modern factory complex is designed to streamline production processes and optimize efficiency. Equipped with state-of-the-art machinery and spacious floor layouts, it provides an ideal environment for manufacturing operations. Additionally, the facility boasts ample parking space and easy access to transportation routes.",
+      "price": "$1,000,000",
+      "status": "Sale",
+      "area": "10,000 sqft",
+      "location": "Industrial Zone, City ABC",
+      "facilities": ["High Voltage Electricity Supply", "Water Supply", "Security Cameras", "Parking Area", "Transportation Access", "Office Space"]
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co/BGZVnV4/plants.jpg",
+      "title": "State-of-the-Art Production Plant",
+      "segment_name": "Production Plants",
+      "description": "This production plant is equipped with cutting-edge technology and advanced machinery to support large-scale manufacturing operations. With spacious production floors and efficient workflow layouts, it enables seamless production processes. Moreover, the facility offers convenient access to utilities and transportation networks.",
+      "price": "$2,500,000",
+      "status": "Sale",
+      "area": "20,000 sqft",
+      "location": "Industrial Zone, City XYZ",
+      "facilities": ["High Voltage Electricity Supply", "Water Supply", "ETP Plant", "Transportation Access", "Office Space", "Security Cameras"]
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co/Ns35JK9/industrial-park.jpg",
+      "title": "Industrial Park Development",
+      "segment_name": "Industrial Parks",
+      "description": "This industrial park development offers vast land parcels suitable for various industrial purposes. Strategically located on the outskirts of the city, it provides ample space for large-scale industrial projects. Moreover, the site is well-equipped with essential utilities and infrastructure.",
+      "price": "Contact for Price",
+      "status": "Sale",
+      "area": "100 acres",
+      "location": "Outskirts, City XYZ",
+      "facilities": ["Highway Access", "Power Supply", "Water Supply", "Security Patrol", "Transportation Access", "ETP Plant"]
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co/q5jXBGW/cold-store.jpg",
+      "title": "Cold Storage Facilities",
+      "segment_name": "Cold Storage Facilities",
+      "description": "These cold storage facilities offer controlled environments for preserving perishable goods. Equipped with advanced refrigeration systems and temperature monitoring, they ensure optimal storage conditions. Additionally, the facilities provide convenient access to loading docks for efficient transportation.",
+      "price": "$8000/month",
+      "status": "Rent",
+      "area": "5000 sqft",
+      "location": "Industrial Zone, City ABC",
+      "facilities": ["Temperature Control", "Loading Docks", "Forklift Access", "Security Cameras", "24/7 Monitoring", "Office Space"]
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co/vV0qGQ3/power.jpg",
+      "title": "Power Plant Complex",
+      "segment_name": "Power Plants",
+      "description": "This power plant complex features robust infrastructure for generating and distributing electricity. Equipped with high-capacity generators and transmission lines, it ensures reliable power supply to industrial and commercial establishments. Additionally, the facility offers backup systems and round-the-clock monitoring for uninterrupted operations.",
+      "price": "$5,000,000",
+      "status": "Sale",
+      "area": "50 acres",
+      "location": "Industrial Area, City XYZ",
+      "facilities": ["High Voltage Electricity Supply", "Backup Generators", "Transmission Lines", "Security Patrol", "ETP Plant", "Office Space"]
+    },
+    {
+      "id": 7,
+      "image": "https://i.ibb.co/1YCS76p/warhouse.jpg",
+      "title": "Large Industrial Space",
+      "segment_name": "Warehouses",
+      "description": "This large industrial space provides flexible storage solutions for businesses of all sizes. Featuring expansive floor areas and customizable layouts, it caters to diverse industrial requirements. Moreover, the facility offers essential amenities such as loading docks, office spaces, and security systems.",
+      "price": "$6000/month",
+      "status": "Rent",
+      "area": "8000 sqft",
+      "location": "Industrial Area, City XYZ",
+      "facilities": ["Loading Docks", "Forklift Access", "Security Cameras", "Office Space", "Climate Control", "Parking Area"]
+    },
+    {
+      "id": 8,
+      "image": "https://i.ibb.co/7QyfYw4/warehouse2.jpg",
+      "title": "Industrial Warehouse Complex",
+      "segment_name": "Warehouses",
+      "description": "This industrial warehouse complex offers a blend of functionality and convenience. With spacious storage areas and high ceilings, it accommodates various industrial needs. Additionally, the facility provides essential utilities and amenities to support seamless operations.",
+      "price": "$7000/month",
+      "status": "Rent",
+      "area": "10,000 sqft",
+      "location": "Industrial Zone, City XYZ",
+      "facilities": ["High Voltage Electricity Supply", "Water Supply", "Security Cameras", "Parking Area", "Forklift Access", "Office Space"]
+    },
+    {
+        "id": 9,
+        "image": "https://i.ibb.co/tBY9ZmD/fact-3.jpg",
+        "title": "Advanced Automotive Manufacturing Plant",
+        "segment_name": "Factories",
+        "description": "This advanced automotive manufacturing plant is equipped with cutting-edge machinery and assembly lines for producing vehicles of various types. With a focus on efficiency and quality, the plant ensures streamlined production processes and high product standards. Additionally, the facility offers spacious warehouses for storing raw materials and finished products.",
+        "price": "$5,000,000",
+        "status": "Sale",
+        "area": "50,000 sqft",
+        "location": "Industrial Zone, City XYZ",
+        "facilities": ["High-Tech Machinery", "Assembly Lines", "Quality Control Systems", "Warehouse Space", "Transportation Access", "Security Monitoring"]
+      }
+  ]
