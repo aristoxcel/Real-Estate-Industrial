@@ -1,32 +1,17 @@
+
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form"
+import { AuthContext } from "../Context";
+import { useNavigate } from "react-router-dom";
+
 
 function SignInForm() {
-    // const [state, setState] = React.useState({
-    //     email: "",
-    //     password: ""
-    //   });
-    //   const handleChange = evt => {
-    //     const value = evt.target.value;
-    //     setState({
-    //       ...state,
-    //       [evt.target.name]: value
-    //     });
-    //   };
-    
-    //   const handleOnSubmit = evt => {
-    //     evt.preventDefault();
-    
-    //     const { email, password } = state;
-    //     alert(`You are login with email: ${email} and password: ${password}`);
-    
-    //     for (const key in state) {
-    //       setState({
-    //         ...state,
-    //         [key]: ""
-    //       });
-    //     }
-    //   };
-    
+  const navigate = useNavigate()
+  const [success, setSuccess]= useState(null)
+  const [error, setError]= useState(null)
+
+  const { signIn } = useContext(AuthContext)
+
     const {
       register,
       handleSubmit,
@@ -34,9 +19,21 @@ function SignInForm() {
       formState: { errors },
     } = useForm()
 
+
+    
+
+    // login Submit function
     const loginData = (data) => {
+      setError('')
+      setSuccess('')
+      signIn(data.email, data.password)
+      .then(result=>{
+        setSuccess('you logged in successfully')
+      })
+      .catch(error=>setError('Email or Password is not matching'))
       console.log(data);
       reset()
+      
     }
     console.log(errors);
 
@@ -45,6 +42,7 @@ function SignInForm() {
 
           <form onSubmit={handleSubmit(loginData)}>
             <h1>Sign in</h1>
+            
             <div className="social-container">
               <a href="#" className="social">
                 <i className="fab fa-facebook-f" />
@@ -90,6 +88,8 @@ function SignInForm() {
 
 
             <a href="#">Forgot your password?</a>
+            <h2 className="text-green-500">{success}</h2>
+            <h2 className="text-red-500">{error}</h2>
             <input className='rounded-[20px] border-[#2596BE] bg-[#2596BE] text-white font-poppins text-sm font-bold px-12 py-3 uppercase' type="submit" />
           </form>
         </div>

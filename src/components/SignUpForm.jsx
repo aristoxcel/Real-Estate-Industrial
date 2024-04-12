@@ -1,46 +1,28 @@
+import { useContext, useState } from "react"
 import { useForm } from "react-hook-form"
 import Swal from 'sweetalert2'
+import { AuthContext } from "../Context"
 
 function SignUpForm() {
-    // const [state, setState] = React.useState({
-    //     name: "",
-    //     email: "",
-    //     password: ""
-    //   });
-    //   const handleChange = evt => {
-    //     const value = evt.target.value;
-    //     setState({
-    //       ...state,
-    //       [evt.target.name]: value
-    //     });
-    //   };
-    
-    //   const handleOnSubmit = evt => {
-    //     evt.preventDefault();
-    
-    //     const { name, email, password } = state;
-    //     alert(
-    //       `You are sign up with name: ${name} email: ${email} and password: ${password}`
-    //     );
-    
-    //     for (const key in state) {
-    //       setState({
-    //         ...state,
-    //         [key]: ""
-    //       });
-    //     }
-    //   };
-    
+  const [success, setSuccess]=useState(null)
+  const [error, setError]=useState(null)
+  const {signUp}= useContext(AuthContext)
 
     const {
       register,
       handleSubmit,
       reset,
-      formState: { errors },
+      formState: { errors }, 
     } = useForm()
 
     const signUpData = (data) => {
       console.log(data);
+      signUp(data.email, data.password)
+      .then(result=>{
+        console.log(result.user)
+        setSuccess('User Registered Successfully')
+      })
+      .catch(error=>setError(error.message))
       Swal.fire({
         icon: "success",
         title: "You Registered successfully. Please Sign In !",
@@ -121,6 +103,10 @@ function SignUpForm() {
             
            <input className='rounded-[20px] border-[#2596BE] bg-[#2596BE] text-white font-poppins text-sm font-bold px-12 py-3 uppercase' type="submit" />
           </form>
+          <div>
+                <p className="text-green-400 font-bold">{success}</p>
+                <p className="text-red-400 font-bold">{error}</p>
+          </div>
         </div>
       );
 }
