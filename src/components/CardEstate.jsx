@@ -1,5 +1,6 @@
 import { FaLocationDot } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types'
 
 function CardEstate({property}) {
     const {image, title, segment_name,facilities, area, status, price, location, id}=property
@@ -22,7 +23,7 @@ function CardEstate({property}) {
           </div>
           <div className="flex justify-between items-center flex-wrap">
           <p className="font-poppins text-[#2596BE] font-semibold text-xl ">{price}</p>
-          <button className="px-3  bg-[#2596BE] font-semibold text-xl text-white rounded"><Link to={`/details/${id}`}>View Property</Link></button>
+          <button className="px-3  bg-[#2596BE] font-semibold text-xl text-white rounded"><Link to={`/details/${id}`} state={title}>View Property</Link></button>
           </div>
         </div>
       </div>
@@ -31,3 +32,7 @@ function CardEstate({property}) {
 }
 
 export default CardEstate;
+
+CardEstate.propTypes={
+  property:PropTypes.object
+}
