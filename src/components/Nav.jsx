@@ -32,7 +32,7 @@ function Nav() {
       <li>
         <details>
           <summary>Profile</summary>
-          <ul className="p-2">
+          <ul className="p-2 z-[999] w-72">
             <li><NavLink to={'/userprofile'}>View Profile</NavLink></li>
             <li><NavLink to={'/upgradeUserprofile'}>Upgrade Profile</NavLink></li>
           </ul>
