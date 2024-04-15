@@ -22,9 +22,9 @@ function DetailCard() {
     description
   } = card;
   return (
-    <main className="bg-gray-50 pt-24">
-        <div className="  mx-auto     lg:w-4/5 px-3 lg:px-0">
-      <div >
+    <main className="bg-gray-50 pt-16">
+        <div className="  mx-auto lg:w-4/5 px-1 lg:px-0 border-2 rounded-2xl">
+      <div className="p-2">
         <button className="rounded px-2 bg-[#2596BE] text-base font-poppins font-medium text-white mr-4">
           For {status}
         </button>
@@ -33,21 +33,21 @@ function DetailCard() {
           {segment_name}
         </button>
       </div>
-      <div className="flex justify-between my-4 space-y-3">
+      <div className="flex justify-between space-y-2 px-2">
         <h1 className="font-franklin text-4xl text-gray-600 font-semibold">
           {title}
         </h1>
-        <h2 className="font-poppins text-[#2596BE] font-semibold text-xl ">
+        <h2 className="font-poppins text-[#2596BE] font-semibold text-4xl ">
           {price}
         </h2>
       </div>
-      <div className="flex items-center gap-2 pb-3">
+      <div className="flex items-center gap-2 pb-3 px-2">
         <FaLocationDot className="text-[#2596BE] text-xl" />
         <p className="py-2 text-lg font-medium font-poppins text-gray-400">
           {location}
         </p>
       </div>
-      <div className="pb-8">
+      <div className="pb-5 px-2">
         <img
           className="w-full h-[550px] rounded-2xl "
           src={image}
@@ -56,8 +56,8 @@ function DetailCard() {
       </div>
 
       {/* overvies section start here */}
-      <div className="">
-        <div className="footer p-10 text-neutral  rounded-2xl bg-white ">
+      <div className="px-2">
+        <div className="footer p-10 text-neutral  rounded-2xl bg-teal-50">
           <div>
             <h6 className="footer-title text-black text-xl font-franklin">
               Overview
@@ -108,8 +108,8 @@ function DetailCard() {
 
 
       {/* Description section start here */}
-      <section>
-        <div className="p-5 rounded-2xl bg-white my-8">
+      <section className="px-2">
+        <div className="p-5 rounded-2xl  my-5 bg-orange-50">
             <h1 className="font-franklin text-black text-xl font-bold  opacity-60 py-4">DESCRIPTION</h1>
             <p className="font-poppins opacity-70 pb-5 ">{description}</p>
         </div>
@@ -117,8 +117,8 @@ function DetailCard() {
 
 
       {/* Feature section start here */}
-      <section className="pb-8">
-        <div className="p-5 rounded-2xl bg-white my-8">
+      <section className="pb-5 px-2 ">
+        <div className="p-5 rounded-2xl  my-5 bg-sky-50">
             <h1 className="font-franklin text-black text-xl font-bold  opacity-60 py-4">Facilities</h1>
             {
                facilities.map((i,b)=><div key={b} className="flex gap-5"> <FaCircleNodes className="opacity-60"/> <p  className="font-poppins opacity-70 pb-5 ">{i}</p></div>)

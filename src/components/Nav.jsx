@@ -19,7 +19,7 @@ function Nav() {
         </h1>
       </div>
 
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-sky-50">
         <div className="navbar-start lg:w-0 ">
           <div className="dropdown ">
             <div tabIndex={0} role="button" className="btn  ring-2 ring-offset-2 hover:bg-[#2596BE] hover:text-white lg:hidden ">
@@ -94,8 +94,8 @@ function Nav() {
                 role="button"
                 className="btn btn-ghost btn-circle avatar"
               >
-                <div className="w-10 rounded-full">
-                  <img src={user?.photoURL || "logo.png"} alt="" />
+             <div className="tooltip w-10 hover:ring-2 hover:ring-offset-2 rounded-full" data-tip="name">
+                <img src={user?.photoURL || "logo.png"} alt="" />
                 </div>
               </div>
               <ul

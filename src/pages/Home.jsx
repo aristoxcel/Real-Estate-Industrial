@@ -6,7 +6,7 @@ import CardEstate from "../components/CardEstate"
 function Home() {
  const estate = useLoaderData()
   return (
-    <div>
+    <div className="bg-teal-50">
       <Banner/>
     <div className="mx-auto text-center mt-24 px-3">
       <h3 className="font-franklin  font-semibold uppercase text-gray-400 mb-5 hover:text-[#2596BE] hover:text-lg hover:mb-4">Prime Industrial Spaces Await You</h3>

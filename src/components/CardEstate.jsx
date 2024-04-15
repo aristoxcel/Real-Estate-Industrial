@@ -9,7 +9,7 @@ function CardEstate({property}) {
       <div className="card  bg-base-100 shadow-xl flex-grow">
         <figure className="relative">
             <button className="rounded px-3 font-poppins bg-[#2596BE] border-none text-white font-bold text-xl p-[-1px] absolute right-8 top-6">{status}</button>
-          <img className="w-full object-contain"
+          <img className="w-full object-fill h-96"
             src={image}
             alt="Shoes"
           />

@@ -31,11 +31,11 @@ const Banner = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide><div ><img className='w-full h-[600px] object-cover' src={'industrial.jpg'} alt="" /></div></SwiperSlide>
-        <SwiperSlide><div><img className='w-full h-[600px] object-cover' src={'Factories.jpg'} alt="" /></div></SwiperSlide>
-        <SwiperSlide><div><img className='w-full h-[600px] object-cover' src={'factories2.jpg'} alt="" /></div></SwiperSlide>
-        <SwiperSlide><div><img className='w-full h-[600px] object-cover' src={'warehouse2.jpg'} alt="" /></div></SwiperSlide>
-        <SwiperSlide><div><img className='w-full h-[600px] object-cover' src={'warhouse.jpg'} alt="" /></div></SwiperSlide>
+        <SwiperSlide><div ><img className='w-full h-[600px] object-fill' src={'https://i.ibb.co/1bKCZ9W/manufactur.jpg'} alt="" /></div></SwiperSlide>
+        <SwiperSlide><div><img className='w-full h-[600px] object-fill' src={'https://i.ibb.co/yX10rx6/warehouse.png'} alt="" /></div></SwiperSlide>
+        <SwiperSlide><div><img className='w-full h-[600px] object-fill' src={'https://i.ibb.co/kqVqcMh/navvis-factory-planning2-header.webp'} alt="" /></div></SwiperSlide>
+        <SwiperSlide><div><img className='w-full h-[600px] object-fill' src={'https://i.ibb.co/qM94XQg/plants.png'} alt="" /></div></SwiperSlide>
+        <SwiperSlide><div><img className='w-full h-[600px] object-fill' src={'warhouse.jpg'} alt="" /></div></SwiperSlide>
       </Swiper>
     </>
   )
