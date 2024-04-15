@@ -1,20 +1,19 @@
-
+import { useContext } from "react";
+import { AuthContext } from "../Context";
 
 function UserProfile() {
+  const { user } = useContext(AuthContext);
+  console.log(user);
   return (
     <div>
-        <div className="card w-96 bg-base-100 shadow-xl">
-  <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-  <div className="card-body">
-    <h2 className="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
+      <div className="card w-1/2 bg-base-100 shadow-xl mx-auto">
+        <div className="card-body">
+         <h1 className="text-3xl font-bold">Name: {user?.displayName}</h1>
+         <h1 className="text-3xl font-bold break-all">Photo Url: {user?.photoURL}</h1>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-    </div>
-  )
+  );
 }
 
-export default UserProfile
+export default UserProfile;

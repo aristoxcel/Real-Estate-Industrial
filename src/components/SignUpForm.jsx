@@ -6,7 +6,7 @@ import { AuthContext } from "../Context"
 function SignUpForm() {
   const [success, setSuccess]=useState(null)
   const [error, setError]=useState(null)
-  const {signUp}= useContext(AuthContext)
+  const {signUp, updateUser }= useContext(AuthContext)
 
     const {
       register,
@@ -16,11 +16,12 @@ function SignUpForm() {
     } = useForm()
 
     const signUpData = (data) => {
-      console.log(data);
       signUp(data.email, data.password)
-      .then(result=>{
-        console.log(result.user)
-        setSuccess('User Registered Successfully')
+      .then(()=>{
+        updateUser(data.name, data.photo)
+        .then(()=>{
+          setSuccess('User Registered Successfully')
+        })      
       })
       .catch(error=>setError(error.message))
       Swal.fire({

@@ -1,16 +1,20 @@
-
+import { FcGoogle } from "react-icons/fc";
+import { FaGithub } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form"
 import { AuthContext } from "../Context";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 function SignInForm() {
   const navigate = useNavigate()
   const [success, setSuccess]= useState(null)
   const [error, setError]= useState(null)
-
-  const { signIn } = useContext(AuthContext)
+  const location = useLocation()
+  const from = location?.state || '/';
+  console.log(location);
+  const { signIn, signInWithGoogle, signInWithGithub, signInWithFacebook } = useContext(AuthContext)
 
     const {
       register,
@@ -20,22 +24,52 @@ function SignInForm() {
     } = useForm()
 
 
-    
-
     // login Submit function
     const loginData = (data) => {
       setError('')
       setSuccess('')
+      console.log(data);
       signIn(data.email, data.password)
-      .then(result=>{
-        setSuccess('you logged in successfully')
+      .then(()=>{
+          setSuccess('you logged in successfully')
+        navigate(from)
       })
-      .catch(error=>setError('Email or Password is not matching'))
+      .catch(()=>setError('Email or Password is not matching'))
       console.log(data);
       reset()
-      
     }
     console.log(errors);
+
+
+    // google Sign function
+    const handleSignInGoogle=()=>{
+      signInWithGoogle()
+      .then(()=>{
+        setSuccess('you logged in successfully')
+        navigate(from)
+      })
+      .catch(error=>console.log(error.message))
+    }
+
+        // Github Sign function
+        const handleSignInGithub=()=>{
+          signInWithGithub()
+          .then(()=>{
+            setSuccess('you logged in successfully')
+            navigate(from)
+          })
+          .catch(error=>console.log(error.message))
+        }
+
+     // Facebook Sign function
+     const handleSignInFacebook=()=>{
+      signInWithFacebook()
+      .then(()=>{
+        setSuccess('you logged in successfully')
+        navigate(from)
+      })
+      .catch(error=>console.log(error.message))
+    }
 
       return (
         <div className="form-container sign-in-container">
@@ -44,14 +78,14 @@ function SignInForm() {
             <h1>Sign in</h1>
             
             <div className="social-container">
-              <a href="#" className="social">
-                <i className="fab fa-facebook-f" />
+              <a href="#" onClick={handleSignInFacebook} className="social">
+              <FaFacebook className="text-3xl" />
               </a>
-              <a href="#" className="social">
-                <i className="fab fa-google-plus-g" />
+              <a href="#" onClick={handleSignInGoogle} className="social">
+              <FcGoogle className="text-3xl "/>
               </a>
-              <a href="#" className="social">
-                <i className="fab fa-linkedin-in" />
+              <a href="#" onClick={handleSignInGithub} className="social">
+              <FaGithub className="text-3xl"/>
               </a>
             </div>
             <span>or use your account</span>

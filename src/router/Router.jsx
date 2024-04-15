@@ -7,6 +7,7 @@ import UserProfile from "../pages/UserProfile";
 import UpgradeUserProfile from "../pages/UpgradeUserProfile";
 import DetailCard from "../pages/DetailCard";
 import ErrorPage from "../pages/ErrorPage";
+import PrivateRoute from "./PrivateRoute";
 
 export const router =createBrowserRouter([
     {
@@ -15,11 +16,11 @@ export const router =createBrowserRouter([
       errorElement:<ErrorPage/>,
       children:[
         {path:'/', element:<Home></Home>, loader:()=>fetch('/estates.json')},
-        {path:'/details/:id', element:<DetailCard></DetailCard>, loader:()=>fetch('/estates.json')},
+        {path:'/details/:id', element:<PrivateRoute><DetailCard></DetailCard></PrivateRoute>, loader:()=>fetch('/estates.json')},
         {path:'/login', element: <Login></Login>},
         {path:'/registration', element:<Registration/>},
-        {path:'/userprofile', element:<UserProfile/>},
-        {path:'/upgradeUserprofile', element:<UpgradeUserProfile/>},
+        {path:'/userprofile', element:<PrivateRoute><UserProfile/></PrivateRoute>},
+        {path:'/upgradeUserprofile', element:<PrivateRoute><UpgradeUserProfile/></PrivateRoute>},
       ]
     }
   ])

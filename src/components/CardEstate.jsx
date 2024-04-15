@@ -23,7 +23,7 @@ function CardEstate({property}) {
           </div>
           <div className="flex justify-between items-center flex-wrap">
           <p className="font-poppins text-[#2596BE] font-semibold text-xl ">{price}</p>
-          <button className="px-3  bg-[#2596BE] font-semibold text-xl text-white rounded"><Link to={`/details/${id}`} state={title}>View Property</Link></button>
+          <button className="px-3  bg-[#2596BE] hover:bg-gradient-to-r hover:from-[#2596be] hover:to-[#62b4d2] hover:ring-2 hover:ring-offset-2 hover:ring-[#62b4d2] transition-all ease-out duration-300 font-semibold text-xl text-white rounded"><Link to={`/details/${id}`} state={title}>View Property</Link></button>
           </div>
         </div>
       </div>
