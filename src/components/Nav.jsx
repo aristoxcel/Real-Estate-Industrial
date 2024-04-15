@@ -148,7 +148,7 @@ function Nav() {
           :(
             <NavLink
               to={"/login"}
-              className="btn bg-[#2596BE] text-white font-semibold "
+              className="btn bg-[#2596BE] text-white text-base font-semibold "
             >
               Login
             </NavLink>

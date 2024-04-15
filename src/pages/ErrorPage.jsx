@@ -1,6 +1,7 @@
 
 import  {useRouteError,  Link } from 'react-router-dom'
 import Nav from '../components/Nav';
+import Footer from '../components/Footer';
 
 const ErrorPage = () => {
 
@@ -10,13 +11,14 @@ const ErrorPage = () => {
     return (
        <>
         <Nav/>
-      <div id="error-page" className="relative bg-gray-300 min-h-calc(100%-150px) flex justify-center items-center">
-        <img src={'error.png'} alt="" />
-        <p className="absolute z-10 flex flex-col bottom-72">
-          <i className="font-bold text-white text-3xl pb-3">{error.statusText || error.message}</i>
-            <button><Link className="btn bg-lime-600 text-xl font-semibold text-white">Go Home</Link></button>
-        </p>
+      <div className="mx-auto text-center bg-gradient-to-r to-sky-100 from-sky-400  flex-col justify-center items-center py-10">
+          <img src={'err.png'} alt="" className='mx-auto'/>
+          <div className='flex-col'>
+          <p className="font-bold text-teal-700 text-3xl pb-3 text-center font-franklin">Error Message: Page {error.statusText || error.message}</p>
+          <button><Link className="btn bg-[#2596BE] hover:bg-gradient-to-r hover:from-[#2596be] hover:to-[#62b4d2] hover:ring-2 hover:ring-offset-2 hover:ring-[#62b4d2] transition-all ease-out duration-300 font-semibold text-xl text-white rounded-xl font-poppins">Return Home</Link></button>
+          </div>
       </div>
+      <Footer></Footer>
        </>
     );
 
