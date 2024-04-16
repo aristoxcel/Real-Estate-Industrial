@@ -35,7 +35,7 @@ function SignUpForm() {
     console.log(errors);
       return (
         <div className="form-container sign-up-container">
-          <form onSubmit={handleSubmit(signUpData)}>
+          <form className="tForm" onSubmit={handleSubmit(signUpData)}>
             <h1>Create Account</h1>
             <div className="social-container">
               <a href="#" className="social">

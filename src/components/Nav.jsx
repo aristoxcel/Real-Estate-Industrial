@@ -46,29 +46,50 @@ function Nav() {
                 <NavLink to={"/"} className="text-base  font-semibold bg-[#2596BE] mb-1 text-white hover:text-black ">Home</NavLink>
               </li>
               {user && (
-                <li>
-                  <a className="text-base font-semibold bg-[#2596BE] opacity-90 text-white hover:text-black">Profile</a>
-                  <ul className="p-2">
-                    <li>
-                      <NavLink to={"/userprofile"} className="text-base font-semibold bg-[#2596BE] opacity-90 mb-1 text-white hover:text-black">View Profile</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to={"/upgradeUserprofile"}className="text-base font-semibold  bg-[#2596BE] opacity-90 text-white hover:text-black">
-                        Upgrade Profile
-                      </NavLink>
-                    </li>
-                  </ul>
-                </li>
+                <div>
+                  <li>
+                    <a className="text-base font-semibold bg-[#2596BE] opacity-90 text-white hover:text-black">Profile</a>
+                    <ul className="p-2">
+                      <li>
+                        <NavLink to={"/userprofile"} className="text-base font-semibold bg-[#2596BE] opacity-90 mb-1 text-white hover:text-black">View Profile</NavLink>
+                      </li>
+                      <li>
+                        <NavLink to={"/upgradeUserprofile"}className="text-base font-semibold  bg-[#2596BE] opacity-90 text-white hover:text-black">
+                          Upgrade Profile
+                        </NavLink>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                  <NavLink to={"/Cart"}className="text-base font-semibold  bg-[#2596BE] opacity-90 text-white hover:text-black">
+                    Cart
+                  </NavLink>
+                  </li>
+                </div>
               )}
+              <li>
+               <NavLink to={"/About"} className="text-base font-semibold bg-[#2596BE] opacity-90 text-white hover:text-black my-1">
+                 About us
+               </NavLink>
+             </li>
+             <li>
+               <NavLink to={"/Contact"} className="text-base font-semibold bg-[#2596BE] opacity-90 text-white hover:text-black">
+                 Contact us
+               </NavLink>
+             </li>
             </ul>
           </div>
         </div>
+
+        {/* large page  */}
+
         <div className="navbar-center hidden mx-auto lg:flex w-4/5 lg:justify-between ">
-          <ul className="menu  menu-horizontal px-1">
+          <ul className="menu  menu-horizontal px-1 ">
             <li>
-              <NavLink to={"/"} className="text-lg font-semibold  bg-[#2596BE]  text-white hover:text-black mr-2">Home</NavLink>
+              <NavLink to={"/"} className="text-lg font-semibold  bg-[#2596BE]  text-white hover:text-black mr-2 px-6">Home</NavLink>
             </li>
             {user && (
+              <>
               <li>
                 <details className="bg-none">
                   <summary className="text-lg font-semibold  bg-[#2596BE]  text-white hover:text-black ">Profile</summary>
@@ -84,9 +105,25 @@ function Nav() {
                   </ul>
                 </details>
               </li>
+               <li>
+               <NavLink to={"/Cart"} className="text-lg px-10 font-semibold  bg-[#2596BE] text-white hover:text-black mx-2">
+                 Cart
+               </NavLink>
+             </li>
+              </>
             )}
+            <li>
+               <NavLink to={"/About"} className="text-lg px-5 font-semibold  bg-[#2596BE] text-white hover:text-black mx-1">
+                 About us
+               </NavLink>
+             </li>
+             <li>
+               <NavLink to={"/Contact"} className="text-lg px-5 font-semibold  bg-[#2596BE] text-white hover:text-black mx-2">
+                 Contact us
+               </NavLink>
+             </li>
           </ul>
-          <div className="navbar-end  lg:flex  hidden">
+          <div className="navbar-end  w-40  lg:flex  hidden">
           {user?.email ? (
             <div className="dropdown dropdown-end">
               <div

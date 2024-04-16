@@ -74,7 +74,7 @@ function SignInForm() {
       return (
         <div className="form-container sign-in-container">
 
-          <form onSubmit={handleSubmit(loginData)}>
+          <form className="tForm" onSubmit={handleSubmit(loginData)}>
             <h1>Sign in</h1>
             
             <div className="social-container">

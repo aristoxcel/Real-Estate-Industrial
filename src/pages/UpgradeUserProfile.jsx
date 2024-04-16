@@ -1,6 +1,7 @@
 import { updateProfile } from "firebase/auth";
 import { useContext } from "react";
 import { AuthContext } from "../Context";
+import HeadBar from "../components/HeadBar";
 
 
 
@@ -21,6 +22,7 @@ const {user}=useContext(AuthContext)
 
   return (
     <div>
+      <HeadBar >Upgrade Page</HeadBar>
      <form onSubmit={handleUpdateProfile} className="border-2 border-red-500">
               <div className="form-control lg:w-2/5 w-full">
                 <label className="label">
