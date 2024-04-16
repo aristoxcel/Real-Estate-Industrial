@@ -5,6 +5,7 @@ import { useContext, useState } from "react";
 import { useForm } from "react-hook-form"
 import { AuthContext } from "../Context";
 import { useLocation, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 function SignInForm() {
@@ -32,6 +33,12 @@ function SignInForm() {
       signIn(data.email, data.password)
       .then(()=>{
           setSuccess('you logged in successfully')
+          Swal.fire({
+            icon: "success",
+            title: "you logged in successfully",
+            showConfirmButton: false,
+            timer: 1500
+          });
         navigate(from)
       })
       .catch(()=>setError('Email or Password is not matching'))
@@ -46,6 +53,12 @@ function SignInForm() {
       signInWithGoogle()
       .then(()=>{
         setSuccess('you logged in successfully')
+        Swal.fire({
+          icon: "success",
+          title: "you logged in successfully",
+          showConfirmButton: false,
+          timer: 1500
+        });
         navigate(from)
       })
       .catch(error=>console.log(error.message))
@@ -56,6 +69,12 @@ function SignInForm() {
           signInWithGithub()
           .then(()=>{
             setSuccess('you logged in successfully')
+            Swal.fire({
+              icon: "success",
+              title: "you logged in successfully",
+              showConfirmButton: false,
+              timer: 1500
+            });
             navigate(from)
           })
           .catch(error=>console.log(error.message))
