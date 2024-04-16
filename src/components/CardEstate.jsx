@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 function CardEstate({property}) {
     const {image, title, segment_name,facilities, area, status, price, location, id}=property
   return (
-    <div className="mx-auto w-full flex">
+    <div className="mx-auto w-full flex" id="card">
       <div className="card  bg-base-100 shadow-xl flex-grow">
         <figure className="relative">
             <button className="rounded px-3 font-poppins bg-[#2596BE] border-none text-white font-bold text-xl p-[-1px] absolute right-8 top-6">{status}</button>
