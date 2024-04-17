@@ -47,7 +47,9 @@ function DetailCard() {
           {location}
         </p>
       </div>
-      <div className="pb-5 px-2">
+      <div className="pb-5 px-2" data-aos="zoom-in"
+     data-aos-easing="ease-in-sine"
+     data-aos-duration="500">
         <img
           className="w-full h-[550px] rounded-2xl "
           src={image}
@@ -57,7 +59,9 @@ function DetailCard() {
 
       {/* overvies section start here */}
       <div className="px-2">
-        <div className="footer p-10 text-neutral  rounded-2xl bg-teal-50">
+        <div className="footer p-10 text-neutral  rounded-2xl bg-teal-50" data-aos="fade-right"
+     data-aos-easing="linear"
+     data-aos-duration="500">
           <div>
             <h6 className="footer-title text-black text-xl font-franklin">
               Overview
@@ -109,7 +113,9 @@ function DetailCard() {
 
       {/* Description section start here */}
       <section className="px-2">
-        <div className="p-5 rounded-2xl  my-5 bg-orange-50">
+        <div className="p-5 rounded-2xl  my-5 bg-orange-50" data-aos="fade-left"
+     data-aos-easing="linear"
+     data-aos-duration="500">
             <h1 className="font-franklin text-black text-xl font-bold  opacity-60 py-4">DESCRIPTION</h1>
             <p className="font-poppins opacity-70 pb-5 ">{description}</p>
         </div>
@@ -118,7 +124,9 @@ function DetailCard() {
 
       {/* Feature section start here */}
       <section className="pb-5 px-2 ">
-        <div className="p-5 rounded-2xl  my-5 bg-sky-50">
+        <div className="p-5 rounded-2xl  my-5 bg-sky-50" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
             <h1 className="font-franklin text-black text-xl font-bold  opacity-60 py-4">Facilities</h1>
             {
                facilities.map((i,b)=><div key={b} className="flex gap-5"> <FaCircleNodes className="opacity-60"/> <p  className="font-poppins opacity-70 pb-5 ">{i}</p></div>)

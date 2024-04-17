@@ -7,17 +7,23 @@ function CardEstate({property}) {
   return (
     <div className="mx-auto w-full flex" id="card">
       <div className="card  bg-base-100 shadow-xl flex-grow">
-        <figure className="relative">
+        <figure className="relative" data-aos="zoom-out"
+     data-aos-easing="ease-in-sine"
+     data-aos-duration="300">
             <button className="rounded px-3 font-poppins bg-[#2596BE] border-none text-white font-bold text-xl p-[-1px] absolute right-8 top-6">{status}</button>
           <img className="w-full object-fill h-96"
             src={image}
             alt="Shoes"
           />
-          <div className="absolute text-xl text-white font-semibold flex gap-2  left-5 bottom-4"><FaLocationDot className="text-[#2596BE] text-3xl" /> <h2>{location}</h2></div>
+          <div className="absolute text-xl text-white font-semibold flex gap-2  left-5 bottom-4" ><FaLocationDot className="text-[#2596BE] text-3xl" /> <h2>{location}</h2></div>
         </figure>
         <div className="card-body p-4 pb-6">
           <div className="space-y-1">
-          <h2 className="card-title font-franklin text-gray-700">{title}</h2>
+          <h2 className="card-title font-franklin text-gray-700" data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-delay="500"
+    >{title}</h2>
           <p className="font-poppins text-gray-500">{segment_name} . For {status}</p>
           <p className="font-poppins text-gray-500">{facilities[1]} . {facilities[2]} . {area}</p>
           </div>

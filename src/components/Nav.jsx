@@ -21,7 +21,7 @@ function Nav() {
   return (
     <div className="border">
       <div className="navbar bg-base-300 ">
-        <h1 className="font-franklin text-3xl lg:text-5xl font-semibold lg:font-extrabold mx-auto  bg-gradient-to-r from-[#2596BE] via-green-500 to-[#2596BE] text-transparent bg-clip-text ">
+        <h1 data-aos="fade-up-left" data-aos-duration="500" data-aos-easing="linear" className="font-franklin text-3xl lg:text-5xl font-semibold lg:font-extrabold mx-auto  bg-gradient-to-r from-[#2596BE] via-green-500 to-[#2596BE] text-transparent bg-clip-text ">
           Landmark Industrial Group
         </h1>
       </div>
@@ -93,19 +93,19 @@ function Nav() {
         <div className="navbar-center hidden mx-auto lg:flex w-4/5 lg:justify-between ">
           <ul className="menu  menu-horizontal px-1 ">
             <li>
-              <NavLink to={"/"} className="text-lg font-semibold  bg-[#2596BE]  text-white hover:text-black mr-2 px-6">Home</NavLink>
+              <NavLink to={"/"} data-aos="fade-left" data-aos-delay="500"  className="text-lg font-semibold  bg-[#2596BE]  text-white hover:text-black mr-2 px-6">Home</NavLink>
             </li>
             {user && (
               <>
               <li>
                 <details className="bg-transparent">
-                  <summary className="text-lg font-semibold  bg-[#2596BE]  text-white hover:text-black ">Profile</summary>
+                  <summary data-aos="fade-left" data-aos-delay="600"  className="text-lg font-semibold  bg-[#2596BE]  text-white hover:text-black ">Profile</summary>
                   <ul className="p-2 z-[999] w-72 bg-transparent">
                     <li>
-                      <NavLink to={"/userprofile"} className="text-base font-semibold  bg-[#2596BE] hover:bg-[#7f63c6]  text-white hover:text-black opacity-80 mb-1">View Profile</NavLink>
+                      <NavLink to={"/userprofile"} data-aos="fade-left" data-aos-delay="700"  className="text-base font-semibold  bg-[#2596BE] hover:bg-[#7f63c6]  text-white hover:text-black opacity-80 mb-1">View Profile</NavLink>
                     </li>
                     <li >
-                      <NavLink to={"/upgradeUserprofile"} className="text-base font-semibold  bg-[#2596BE] hover:bg-[#7f63c6]  text-white hover:text-black opacity-80">
+                      <NavLink to={"/upgradeUserprofile"} data-aos="fade-left" data-aos-delay="800"  className="text-base font-semibold  bg-[#2596BE] hover:bg-[#7f63c6]  text-white hover:text-black opacity-80">
                         Upgrade Profile
                       </NavLink>
                     </li>
@@ -113,19 +113,19 @@ function Nav() {
                 </details>
               </li>
                <li>
-               <NavLink to={"/Cart"} className="text-lg px-10 font-semibold  bg-[#2596BE] text-white hover:text-black mx-2">
+               <NavLink to={"/Cart"} data-aos="fade-left" data-aos-delay="900"  className="text-lg px-10 font-semibold  bg-[#2596BE] text-white hover:text-black mx-2">
                  Cart
                </NavLink>
              </li>
               </>
             )}
             <li>
-               <NavLink to={"/About"} className="text-lg px-5 font-semibold  bg-[#2596BE] text-white hover:text-black mx-1">
+               <NavLink to={"/About"} data-aos="fade-left" data-aos-delay="1200" data-aos-easing="linear"  className="text-lg px-5 font-semibold  bg-[#2596BE] text-white hover:text-black mx-1">
                  About us
                </NavLink>
              </li>
              <li>
-               <NavLink to={"/Contact"} className="text-lg px-5 font-semibold  bg-[#2596BE] text-white hover:text-black mx-2">
+               <NavLink to={"/Contact"} data-aos="fade-left" data-aos-delay="1500" data-aos-easing="linear"  className="text-lg px-5 font-semibold  bg-[#2596BE] text-white hover:text-black mx-2">
                  Contact us
                </NavLink>
              </li>
@@ -167,7 +167,7 @@ function Nav() {
                 role="button"
                 className="btn btn-ghost btn-circle avatar"
               >
-                <div className="w-10 rounded-full">
+                <div className="w-10 rounded-full" data-aos="fade-right" data-aos-delay="800" >
                   <img src={user?.photoURL || "logo.png"} alt="" />
                 </div>
               </div>
@@ -179,7 +179,7 @@ function Nav() {
                   <NavLink className=" bg-[#2596BE] mb-1 text-white font-franklin">{user?.displayName || "User Name"}</NavLink>
                 </li>
                 <li>
-                  <button
+                  <button 
                     onClick={handleLogout}
                     className=" bg-[#7f63c6] text-white font-semibold  font-franklin hover:bg-[#2596BE]"
                   >

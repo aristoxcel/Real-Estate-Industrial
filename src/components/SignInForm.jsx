@@ -94,16 +94,16 @@ function SignInForm() {
         <div className="form-container sign-in-container">
 
           <form className="tForm" onSubmit={handleSubmit(loginData)}>
-            <h1 className="text-lg font-poppins font-semibold opacity-70">Sign in</h1>
+            <h1 data-aos="zoom-in" data-aos-duration="500" data-aos-easing="linear" className="text-lg font-poppins font-semibold opacity-70">Sign in</h1>
             
-            <div className="social-container">
-              <a href="#" onClick={handleSignInGoogle} className="social hover:ring-offset-2 hover:ring-2">
+            <div className="social-container " >
+              <a data-aos="fade-up-right" data-aos-delay="200" data-aos-easing="linear" href="#" onClick={handleSignInGoogle} className="social hover:ring-offset-2 hover:ring-2">
               <FcGoogle className="text-3xl "/>
               </a>
               {/* <a href="#" onClick={handleSignInFacebook} className="social">
               <FaFacebook className="text-3xl" />
               </a> */}
-              <a href="#" onClick={handleSignInGithub} className="social hover:ring-offset-2 hover:ring-2">
+              <a data-aos="fade-up-left" data-aos-delay="200" data-aos-easing="linear" href="#" onClick={handleSignInGithub} className="social hover:ring-offset-2 hover:ring-2">
               <FaGithub className="text-3xl"/>
               </a>
             </div>

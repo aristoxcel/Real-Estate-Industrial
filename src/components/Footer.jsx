@@ -7,21 +7,27 @@ function Footer() {
   return (
     <div className="bg-base-200">
       <footer className="footer p-10 text-base-content lg:w-4/5 mx-auto">
-  <nav>
+  <nav data-aos="fade-down"
+     data-aos-easing="ease-in-sine"
+     data-aos-duration="500">
     <h6 className="footer-title">Services</h6> 
     <a className="link link-hover">Property selling</a>
     <a className="link link-hover">Property Buying</a>
     <a className="link link-hover">Architectural</a>
     <a className="link link-hover">Advising</a>
   </nav> 
-  <nav>
+  <nav data-aos="fade-down"
+     data-aos-easing="ease-in-sine"
+     data-aos-delay="300">
     <h6 className="footer-title">Company</h6> 
     <a className="link link-hover">About us: Landmark Group</a>
     <a className="link link-hover">Contact : 01911309454</a>
     <a className="link link-hover">Jobs : www.Landmark.com</a>
     <a className="link link-hover">Press kit</a>
   </nav> 
-  <nav>
+  <nav data-aos="fade-down"
+     data-aos-easing="ease-in-sine"
+     data-aos-delay="600">
     <h6 className="footer-title">Legal</h6> 
     <a className="link link-hover">Terms of use</a>
     <a className="link link-hover">Privacy policy</a>
@@ -35,9 +41,9 @@ function Footer() {
   </aside> 
   <nav className="md:place-self-center md:justify-self-end">
     <div className="grid grid-flow-col gap-4">
-      <a><FaTwitter className="text-3xl text-sky-400"/></a>
-      <a><IoLogoYoutube className="text-3xl text-red-500"/></a>
-      <a><FaSquareFacebook className="text-3xl text-sky-800"/></a>
+      <a ><FaTwitter className="text-3xl text-sky-400"/></a>
+      <a ><IoLogoYoutube className="text-3xl text-red-500"/></a>
+      <a ><FaSquareFacebook className="text-3xl text-sky-800"/></a>
     </div>
   </nav>
 </footer>

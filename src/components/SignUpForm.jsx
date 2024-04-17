@@ -106,7 +106,9 @@ function SignUpForm() {
 
         
             
-           <input className='rounded-[20px] border-[#2596BE] bg-[#2596BE] text-white font-poppins text-sm font-bold px-12 py-3 uppercase' type="submit" />
+           <input data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-delay="3000" className='rounded-[20px] border-[#2596BE] bg-[#2596BE] text-white font-poppins text-sm font-bold px-12 py-3 uppercase' type="submit" />
           </form>
           <div>
                 <p className="text-green-400 font-bold">{success}</p>

@@ -2,7 +2,9 @@ import { useEffect } from "react";
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import { Outlet, useLocation } from "react-router-dom"
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 function Layout() {
 

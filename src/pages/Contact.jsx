@@ -30,7 +30,9 @@ function Contact() {
 
       <div className="lg:w-4/5 lg:px-24 px-8 mx-auto lg:py-12 py-8">
         <hr className="border-dashed lg:my-8 my-6"></hr>
-        <h1 className="lg:text-4xl text-2xl font-extrabold py-4 lg:py-6 text-center text-[#2596BE] playfair">
+        <h1 data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="500" className="lg:text-4xl text-2xl font-extrabold py-4 lg:py-6 text-center text-[#2596BE] playfair">
           Contact with us
         </h1>
         <p className="text-pera lg:text-base text-sm font-medium text-center lg:w-1/2 md:w-2/3 mx-auto">

@@ -4,7 +4,9 @@ function Consult() {
       <div className="bg-[url('Factories.jpg')] my-10">
        <div className="bg-black opacity-40">
        <div className="lg:w-[70%] md:w-4/5 mx-auto grid grid-cols-2 gap-5 px-3 md:px-0 ">
-          <div className="py-16">
+          <div className="py-16" data-aos="fade-left"
+     data-aos-easing="ease-in-sine"
+     data-aos-delay="100">
             <h1 className="font-franklin text-2xl md:text-4xl lg:text-5xl font-bold uppercase text-white">
               request a free
             </h1>
@@ -30,7 +32,9 @@ function Consult() {
           <div className="lg:w-[70%] md:w-4/5 mx-auto grid md:grid-cols-2 grid-cols-1 gap-5  px-3 md:px-0">
             <div></div>
             <div>
-              <div className="md:ml-4 w-full  shadow-2xl bg-base-100 px-3 md:px-4 pt-10 rounded-lg">
+              <div data-aos="flip-left"
+     data-aos-easing="ease-in-sine"
+     data-aos-duration="400" className="md:ml-4 w-full  shadow-2xl bg-base-100 px-3 md:px-4 pt-10 rounded-lg">
                 <h1 className="text-lg md:text-2xl font-semibold font-franklin opacity-80">Get in touch with us</h1>
                 <p className=" mt-3 font-poppins text-sm font-medium opacity-70 text-wrap pb-2">Reach out to us today to get personalized assistance and expert guidance for all your industrial real estate needs.</p>
                 <form className=" py-3 space-y-2">
