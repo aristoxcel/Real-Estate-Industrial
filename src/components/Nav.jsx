@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Context";
+import Swal from "sweetalert2";
 
 
 function Nav() {
@@ -9,6 +10,12 @@ function Nav() {
 
   const handleLogout = () => {
     logout();
+    Swal.fire({
+      icon: "success",
+      title: "you logout successfully",
+      showConfirmButton: false,
+      timer: 1500
+    });
     navigate("/login");
   };
   return (
@@ -43,37 +50,37 @@ function Nav() {
               className="menu menu-sm dropdown-content mt-3 z-[999] p-2 shadow rounded-box w-72 bg-info-500"
             >
               <li>
-                <NavLink to={"/"} className="text-base  font-semibold bg-[#2596BE] mb-1 text-white hover:text-black ">Home</NavLink>
+                <NavLink to={"/"} className="text-base  font-semibold bg-[#2596BE] hover:bg-[#7f63c6] mb-1 text-white hover:text-black ">Home</NavLink>
               </li>
               {user && (
                 <div>
                   <li>
-                    <a className="text-base font-semibold bg-[#2596BE] opacity-90 text-white hover:text-black">Profile</a>
+                    <a className="text-base font-semibold bg-[#2596BE] hover:bg-[#7f63c6] opacity-90 text-white hover:text-black">Profile</a>
                     <ul className="p-2">
                       <li>
-                        <NavLink to={"/userprofile"} className="text-base font-semibold bg-[#2596BE] opacity-90 mb-1 text-white hover:text-black">View Profile</NavLink>
+                        <NavLink to={"/userprofile"} className="text-base font-semibold bg-[#2596BE] hover:bg-[#7f63c6] opacity-90 mb-1 text-white hover:text-black">View Profile</NavLink>
                       </li>
                       <li>
-                        <NavLink to={"/upgradeUserprofile"}className="text-base font-semibold  bg-[#2596BE] opacity-90 text-white hover:text-black">
+                        <NavLink to={"/upgradeUserprofile"}className="text-base font-semibold  bg-[#2596BE] hover:bg-[#7f63c6] opacity-90 text-white hover:text-black">
                           Upgrade Profile
                         </NavLink>
                       </li>
                     </ul>
                   </li>
                   <li>
-                  <NavLink to={"/Cart"}className="text-base font-semibold  bg-[#2596BE] opacity-90 text-white hover:text-black">
+                  <NavLink to={"/Cart"}className="text-base font-semibold  bg-[#2596BE] hover:bg-[#7f63c6] opacity-90 text-white hover:text-black">
                     Cart
                   </NavLink>
                   </li>
                 </div>
               )}
               <li>
-               <NavLink to={"/About"} className="text-base font-semibold bg-[#2596BE] opacity-90 text-white hover:text-black my-1">
+               <NavLink to={"/About"} className="text-base font-semibold bg-[#2596BE] hover:bg-[#7f63c6] opacity-90 text-white hover:text-black my-1">
                  About us
                </NavLink>
              </li>
              <li>
-               <NavLink to={"/Contact"} className="text-base font-semibold bg-[#2596BE] opacity-90 text-white hover:text-black">
+               <NavLink to={"/Contact"} className="text-base font-semibold bg-[#2596BE] hover:bg-[#7f63c6] opacity-90 text-white hover:text-black">
                  Contact us
                </NavLink>
              </li>
@@ -91,14 +98,14 @@ function Nav() {
             {user && (
               <>
               <li>
-                <details className="bg-none">
+                <details className="bg-transparent">
                   <summary className="text-lg font-semibold  bg-[#2596BE]  text-white hover:text-black ">Profile</summary>
-                  <ul className="p-2 z-[999] w-72">
+                  <ul className="p-2 z-[999] w-72 bg-transparent">
                     <li>
-                      <NavLink to={"/userprofile"} className="text-base font-semibold  bg-[#2596BE]  text-white hover:text-black opacity-80 mb-1">View Profile</NavLink>
+                      <NavLink to={"/userprofile"} className="text-base font-semibold  bg-[#2596BE] hover:bg-[#7f63c6]  text-white hover:text-black opacity-80 mb-1">View Profile</NavLink>
                     </li>
                     <li >
-                      <NavLink to={"/upgradeUserprofile"} className="text-base font-semibold  bg-[#2596BE]  text-white hover:text-black opacity-80">
+                      <NavLink to={"/upgradeUserprofile"} className="text-base font-semibold  bg-[#2596BE] hover:bg-[#7f63c6]  text-white hover:text-black opacity-80">
                         Upgrade Profile
                       </NavLink>
                     </li>
@@ -166,15 +173,15 @@ function Nav() {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[999] p-2 shadow bg-base-100 rounded-box w-44"
+                className="menu menu-sm dropdown-content mt-3 z-[999] p-2 shadow  rounded-box w-44"
               >
                 <li>
-                  <NavLink className=" bg-[#2596BE] text-white font-franklin hover:bg-">{user?.displayName || "User Name"}</NavLink>
+                  <NavLink className=" bg-[#2596BE] mb-1 text-white font-franklin">{user?.displayName || "User Name"}</NavLink>
                 </li>
                 <li>
                   <button
                     onClick={handleLogout}
-                    className=" bg-[#7f63c6] text-white font-semibold  font-franklin"
+                    className=" bg-[#7f63c6] text-white font-semibold  font-franklin hover:bg-[#2596BE]"
                   >
                     Logout
                   </button>
@@ -236,15 +243,15 @@ function Nav() {
               </div>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[999] p-2 shadow bg-base-100 rounded-box w-44"
+                className="menu menu-sm dropdown-content mt-3 z-[999] p-2 shadow  rounded-box w-44"
               >
                 <li>
-                  <NavLink className=" bg-[#2596BE] text-white font-franklin hover:bg-">{user?.displayName || "User Name"}</NavLink>
+                  <NavLink className=" bg-[#2596BE] text-white font-franklin mb-1">{user?.displayName || "User Name"}</NavLink>
                 </li>
                 <li>
                   <button
                     onClick={handleLogout}
-                    className=" bg-[#7f63c6] text-white font-semibold  font-franklin"
+                    className=" bg-[#7f63c6] text-white font-semibold  font-franklin hover:bg-[#2596BE]"
                   >
                     Logout
                   </button>

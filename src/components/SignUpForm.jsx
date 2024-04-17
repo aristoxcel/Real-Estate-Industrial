@@ -2,10 +2,12 @@ import { useContext, useState } from "react"
 import { useForm } from "react-hook-form"
 import Swal from 'sweetalert2'
 import { AuthContext } from "../Context"
+import { FaEye, FaEyeSlash } from "react-icons/fa"
 
 function SignUpForm() {
   const [success, setSuccess]=useState(null)
   const [error, setError]=useState(null)
+  const [show, setShow]=useState(false)
   const {signUp, updateUser }= useContext(AuthContext)
 
     const {
@@ -36,8 +38,8 @@ function SignUpForm() {
       return (
         <div className="form-container sign-up-container">
           <form className="tForm" onSubmit={handleSubmit(signUpData)}>
-            <h1>Create Account</h1>
-            <div className="social-container">
+            <h1 className="text-lg font-poppins font-semibold opacity-70 mb-3">Create Account</h1>
+            {/* <div className="social-container">
               <a href="#" className="social">
                 <i className="fab fa-facebook-f" />
               </a>
@@ -48,7 +50,7 @@ function SignUpForm() {
                 <i className="fab fa-linkedin-in" />
               </a>
             </div>
-            <span>or use your email for registration</span>
+            <span>or use your email for registration</span> */}
             
             <input 
             className='bg-[#eee] border-none px-3 py-3 my-2 w-full' 
@@ -80,8 +82,9 @@ function SignUpForm() {
             aria-invalid={errors.photo ? "true" : "false"} />
            {errors.photo && <p className="text-red-500 font-semibold">{errors.photo.message}</p>}
 
-           <input className='bg-[#eee] border-none px-3 py-3 my-2 w-full' 
-            type="password" 
+          <div className="w-full relative">
+          <input className='bg-[#eee] border-none px-3 py-3 my-2 w-full ' 
+            type={show? "text":"password"} 
             placeholder="Password" 
             {...register("password", 
             {required: {
@@ -97,8 +100,9 @@ function SignUpForm() {
               message:"Password at least one word Uppercase or Lowercase"
             }}
           )} 
-            aria-invalid={errors.Password ? "true" : "false"}/>
+            aria-invalid={errors.Password ? "true" : "false"}/><span onClick={()=>setShow(!show)} className="absolute top-6 right-3">{show?<FaEyeSlash/>:<FaEye/>}</span>
             {errors.password  && <p className="text-red-500 font-semibold">{errors.password.message}</p>}
+          </div>
 
         
             

@@ -1,6 +1,6 @@
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
+// import { FaFacebook } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form"
 import { AuthContext } from "../Context";
@@ -81,29 +81,29 @@ function SignInForm() {
         }
 
      // Facebook Sign function
-     const handleSignInFacebook=()=>{
-      signInWithFacebook()
-      .then(()=>{
-        setSuccess('you logged in successfully')
-        navigate(from)
-      })
-      .catch(error=>console.log(error.message))
-    }
+    //  const handleSignInFacebook=()=>{
+    //   signInWithFacebook()
+    //   .then(()=>{
+    //     setSuccess('you logged in successfully')
+    //     navigate(from)
+    //   })
+    //   .catch(error=>console.log(error.message))
+    // }
 
       return (
         <div className="form-container sign-in-container">
 
           <form className="tForm" onSubmit={handleSubmit(loginData)}>
-            <h1>Sign in</h1>
+            <h1 className="text-lg font-poppins font-semibold opacity-70">Sign in</h1>
             
             <div className="social-container">
-              <a href="#" onClick={handleSignInFacebook} className="social">
-              <FaFacebook className="text-3xl" />
-              </a>
-              <a href="#" onClick={handleSignInGoogle} className="social">
+              <a href="#" onClick={handleSignInGoogle} className="social hover:ring-offset-2 hover:ring-2">
               <FcGoogle className="text-3xl "/>
               </a>
-              <a href="#" onClick={handleSignInGithub} className="social">
+              {/* <a href="#" onClick={handleSignInFacebook} className="social">
+              <FaFacebook className="text-3xl" />
+              </a> */}
+              <a href="#" onClick={handleSignInGithub} className="social hover:ring-offset-2 hover:ring-2">
               <FaGithub className="text-3xl"/>
               </a>
             </div>

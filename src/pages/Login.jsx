@@ -20,12 +20,12 @@ function Login() {
         <div className="overlay-container">
           <div className="overlay">
             <div className="overlay-panel overlay-left">
-              <h1>Welcome Back!</h1>
-              <p>
+              <h1 className='text-lg font-poppins font-semibold'>Welcome Back!</h1>
+              <p className='font-franklin text-base mb-3'>
                 To keep connected with us please login with your personal info
               </p>
               <button
-                className='bg-transparent border-white border-2 focus:outline-none rounded-3xl  text-white font-poppins text-sm font-bold px-12 py-3 uppercase '
+                className='bg-transparent border-white border-2 focus:outline-none  rounded-3xl  text-white font-poppins text-sm font-bold px-12 py-3 uppercase '
                 id="signIn"
                 onClick={() => handleOnClick("signIn")}
               >
@@ -33,8 +33,8 @@ function Login() {
               </button>
             </div>
             <div className="overlay-panel overlay-right">
-              <h1>Hello, Friend!</h1>
-              <p>Enter your personal details and start journey with us</p>
+              <h1 className='text-lg font-poppins font-semibold'>Hello, Friend!</h1>
+              <p className='font-franklin text-base mb-3'>Enter your personal details and start journey with us</p>
               <button
                 className='bg-transparent border-white border-2 focus:outline-none rounded-3xl   text-white font-poppins text-sm font-bold px-12 py-3 uppercase'
                 id="signUp"
