@@ -7,7 +7,7 @@ Welcome to Landmark Industrial Group, your premier destination for industrial re
 
 
 ## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://real-estate-industrial.web.app/login)
+[![portfolio](https://img.shields.io/badge/my_portfolio_website_link-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://real-estate-industrial.web.app/)
 
 
 
@@ -22,11 +22,22 @@ Welcome to Landmark Industrial Group, your premier destination for industrial re
 
 ## Installation
 
-Install my-project with npm
+
+Package I used in my Project
+
+```bash
+    -AOS Package,
+    -React-leaflet,
+    -React Hook Form,
+    -Swiper Slider.
+```
+
+Install my-project with this special npm
 
 ```bash
     npm install react-hook-form
     npm i swiper
+    npm install react-leaflet
     npm install --save aos@next
 ```
     
